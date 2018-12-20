@@ -56,28 +56,26 @@ void p11_4() {
 
 }
 
-void p16(){
+void p16() {
     int n;
-    scanf("%d",&n);
-    for (int i = 1; i < n+1; ++i) {
-        printf("%d\n",i);
+    scanf("%d", &n);
+    for (int i = 1; i < n + 1; ++i) {
+        printf("%d\n", i);
     }
 }
 
-void p18_1(){
-    int a,b,n;
+void p18_1() {
+    int a, b, n;
     double m;
-    for (a = 1; a <=9 ; ++a) {
-        for (b= 0; b <=9 ; ++b) {
-            n=1100*a+11*b;
-            m=sqrt(n);
-            if (floor(m+0.5)==m) printf("%d\n",n);
-
+    for (a = 1; a <= 9; ++a) {
+        for (b = 0; b <= 9; ++b) {
+            n = 1100 * a + 11 * b;
+            m = sqrt(n);
+            if (floor(m + 0.5) == m) printf("%d\n", n);
         }
-
     }
-
 }
+
 int main() {
     printf("Hello, World!\n");
     p18_1();
