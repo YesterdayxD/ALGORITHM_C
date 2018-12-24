@@ -76,8 +76,24 @@ void p18_1() {
     }
 }
 
+void p21(){
+    for (int i = 1; ; ++i) {
+
+        int n=i*i;
+        if(n<1000)
+            continue;
+        if(n>9999)
+            break;
+        int hi=n/100;
+        int lo=n%100;
+        if(hi/10==hi%10&&lo/10==lo%10)
+            printf("%d\n",n);
+
+    }
+}
+
 int main() {
     printf("Hello, World!\n");
-    p18_1();
+    p21();
     return 0;
 }
