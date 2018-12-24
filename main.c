@@ -76,24 +76,42 @@ void p18_1() {
     }
 }
 
-void p21(){
-    for (int i = 1; ; ++i) {
+void p21() {
+    for (int i = 1;; ++i) {
 
-        int n=i*i;
-        if(n<1000)
+        int n = i * i;
+        if (n < 1000)
             continue;
-        if(n>9999)
+        if (n > 9999)
             break;
-        int hi=n/100;
-        int lo=n%100;
-        if(hi/10==hi%10&&lo/10==lo%10)
-            printf("%d\n",n);
+        int hi = n / 100;
+        int lo = n % 100;
+        if (hi / 10 == hi % 10 && lo / 10 == lo % 10)
+            printf("%d\n", n);
 
     }
 }
 
+void p22() {
+    int count = 0;
+    int n2;
+    scanf("%d", &n2);
+    long long n=n2;
+    while (n > 1) {
+        if (n % 2 == 1) {
+
+            n = 3 * n + 1;
+            count++;
+        } else {
+            n = n / 2;
+            count++;
+        }
+    }
+    printf("%d\n", count);
+}
+
 int main() {
     printf("Hello, World!\n");
-    p21();
+    p22();
     return 0;
 }
