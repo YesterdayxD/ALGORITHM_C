@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-
+#include <time.h>
 void p6() {
     int n;
     scanf("%d", &n);
@@ -110,8 +110,35 @@ void p22() {
     printf("%d\n", count);
 }
 
+void p24(){
+    double sum =0;
+    for (int i = 0;  ; ++i) {
+        double term=1.0/(2*i+1);
+        if(i%2==0)sum+=term;
+        else sum-=term;
+        if(term<1e-6)break;
+    }
+    printf("%.6f\n",sum);
+}
+
+void p25(){
+    int n,S=0;
+    scanf("%d",&n);
+    if(n>25)n=25;
+    for (int i = 1; i <=n; ++i) {
+        int f=1;
+        for (int j = 1; j <=i ; ++j) {
+            f*=j;
+        }
+        S+=f;
+    }
+    printf("%d\n",S%1000000);
+    printf("%.6f\n",(double)clock()/CLOCKS_PER_SEC);
+
+}
+
 int main() {
     printf("Hello, World!\n");
-    p22();
+    p25();
     return 0;
 }
