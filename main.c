@@ -137,8 +137,38 @@ void p25(){
 
 }
 
+void p26(){
+    const int MOD=1000000;
+    int n,S=0;
+    scanf("%d",&n);
+    if(n>25)n=25;
+    for (int i = 1; i <=n; ++i) {
+        int f=1;
+        for (int j = 1; j <=i ; ++j) {
+            f=f*j%MOD;
+        }
+        S=(f+S)%MOD;
+    }
+    printf("%d\n",S%1000000);
+    printf("%.6f\n",(double)clock()/CLOCKS_PER_SEC);
+
+}
+
+void p28(){
+    //it exists bug : no initial variable
+    int x,n=0,max,min,s=0;
+    while(scanf("%d",&x)==1){
+        s+=x;
+        if (x>max)max=x;
+        if (x<min)min=x;
+        n++;
+
+    }
+    printf("%d %d %.3f\n",min,max,(double)s/n);
+}
+
 int main() {
     printf("Hello, World!\n");
-    p25();
+    p28();
     return 0;
 }
