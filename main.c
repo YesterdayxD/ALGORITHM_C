@@ -1,3 +1,5 @@
+//#define LOCAL
+#define INF 1000000000
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
@@ -167,8 +169,42 @@ void p28(){
     printf("%d %d %.3f\n",min,max,(double)s/n);
 }
 
+void p30(){
+#ifdef LOCAL
+    freopen("input.txt","r",stdin);
+    freopen("output.txt","w",stdout);
+#endif
+   int x,n=0,min=INF,max=-INF,s=0;
+   while (scanf("%d",&x)==1){
+       s+=x;
+       if(x<min)min=x;
+       if(x>max)max=x;
+       printf("x= %d min=%d max=%d\n",x,min,max);
+       n++;
+   }
+   printf("%d %d %.3f\n",min,max,(double)s/n);
+
+}
+
+void p31(){
+    FILE *fin,*fout;
+    fin=fopen("input.txt","rb");
+    fout=fopen("output.txt","wb");
+    int x,n=0,min=INF,max=-INF,s=0;
+    while (fscanf(fin,"%d",&x)==1){
+        s+=x;
+        if(x<min)min=x;
+        if(x>max)max=x;
+        //printf("x= %d min=%d max=%d\n",x,min,max);
+        n++;
+    }
+    fprintf(fout,"%d %d %.3f\n",min,max,(double)s/n);
+    fclose(fin);
+    fclose(fout);
+}
+
 int main() {
     printf("Hello, World!\n");
-    p28();
+    p31();
     return 0;
 }
