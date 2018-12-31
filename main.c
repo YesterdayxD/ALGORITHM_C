@@ -203,8 +203,22 @@ void p31(){
     fclose(fout);
 }
 
+void p37(){
+    int maxn=5;
+    int a[maxn];
+    int x,n=0;
+    while (scanf("%d",&x)==1){
+        a[n]=x;
+        n++;
+    }
+    for (int i = n-1; i >=1 ; i--) {
+        printf("%d ",a[i]);
+    }
+    printf("%d\n",a[0]);
+}
+
 int main() {
     printf("Hello, World!\n");
-    p31();
+    p37();
     return 0;
 }
