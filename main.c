@@ -1,8 +1,10 @@
 //#define LOCAL
 #define INF 1000000000
+#define Maxn 1010
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
+#include <string.h>
 void p6() {
     int n;
     scanf("%d", &n);
@@ -217,8 +219,33 @@ void p37(){
     printf("%d\n",a[0]);
 }
 
+int a[Maxn];
+void p39(){
+    int n,k,first=1;
+    memset(a,0, sizeof(a));
+    scanf("%d%d",&n,&k);
+    for (int i = 1; i <=k ; ++i) {
+        for (int j = 1; j <=n ; ++j) {
+            if(j%i==0)
+                a[j]=!a[j];
+        }
+    }
+
+    for (int i = 1; i <=n ; ++i) {
+        if(a[i])
+        {
+            if(first)
+                first=0;
+            else
+                printf(" ");
+            printf("%d",i);
+        }
+    }
+    printf("\n");
+}
+
 int main() {
     printf("Hello, World!\n");
-    p37();
+    p39();
     return 0;
 }
