@@ -5,6 +5,8 @@
 #include <math.h>
 #include <time.h>
 #include <string.h>
+//#include "my_function.h"
+#include "my_function.cpp"
 void p6() {
     int n;
     scanf("%d", &n);
@@ -246,6 +248,6 @@ void p39(){
 
 int main() {
     printf("Hello, World!\n");
-    p39();
+    p40();
     return 0;
 }
