@@ -5,7 +5,7 @@
 #include <math.h>
 #include <time.h>
 #include <string.h>
-//#include "my_function.h"
+#include "my_function.h"
 #include "my_function.cpp"
 void p6() {
     int n;
