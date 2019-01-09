@@ -6,4 +6,5 @@
 #define ALGORITHM_C_MY_FUNCTION_H
 void p40();
 void p43();
+void p47();
 #endif //ALGORITHM_C_MY_FUNCTION_H

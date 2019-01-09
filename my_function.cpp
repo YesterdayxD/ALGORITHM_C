@@ -48,3 +48,15 @@ void p43(){
     }
     printf("The number of solution = %d\n", count++);
 }
+
+void p47(){
+    int c,q=1;
+    while ((c=getchar())!=EOF){
+        if (c=='"'){
+            printf("%s",q? "``":"''");
+            q=!q;
+        }
+        else
+            printf("%c",c);
+    }
+}
