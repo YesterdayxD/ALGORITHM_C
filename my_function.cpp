@@ -60,3 +60,22 @@ void p47(){
             printf("%c",c);
     }
 }
+
+void p48(){
+
+    char s[]="`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./";
+    int i,c;
+    while ((c=getchar())!=EOF){
+        for (i = 1; s[i]&&s[i]!=c; i++);
+            if(s[i])
+            {putchar(s[i-1]);
+                }
+            else
+            {putchar(c);}
+
+    }
+
+
+
+
+}
